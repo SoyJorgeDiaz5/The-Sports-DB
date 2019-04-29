@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.team.TeamActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Header view -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/stadium_height">
+
+                <ImageView
+                    android:id="@+id/img_team_stadium"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/primary"/>
+
+                <ImageView
+                    android:id="@+id/img_team_badge"
+                    android:layout_width="@dimen/img_badge_size"
+                    android:layout_height="@dimen/img_badge_size"
+                    android:layout_centerInParent="true"
+                    android:layout_margin="@dimen/space_default"
+                    android:src="@drawable/logo_the_sports_db" />
+            </RelativeLayout>
+
+            <!-- Events -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_events"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/space_default"
+                android:orientation="horizontal"/>
+
+            <!-- Team Description -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_default"
+                android:layout_marginEnd="@dimen/space_default"
+                android:layout_marginBottom="@dimen/space_default">
+
+                <TextView
+                    android:id="@+id/tv_team_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/padding_card"
+                    android:gravity="center"/>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Jersey and Foundation year -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginStart="@dimen/space_default"
+                android:layout_marginEnd="@dimen/space_default"
+                android:layout_marginBottom="@dimen/space_default">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/padding_card">
+
+                        <TextView
+                            android:id="@+id/tv_jersey"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_alignParentTop="true"
+                            android:gravity="center"
+                            android:text="@string/txt_team_jersey" />
+
+                        <ImageView
+                            android:id="@+id/img_team_jersey"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:layout_below="@+id/tv_jersey"
+                            android:layout_centerInParent="true"
+                            android:layout_marginTop="@dimen/min_margin_card"/>
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/min_margin_card"
+                        android:background="@color/text_dark"/>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:padding="@dimen/padding_card">
+
+                        <TextView
+                            android:id="@+id/txt_foundation_year"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_alignParentTop="true"
+                            android:text="@string/txt_foundation_year" />
+
+                        <TextView
+                            android:id="@+id/tv_foundation_year"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/txt_foundation_year"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/space_default"
+                            android:gravity="center" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- webpage and social networks -->
+            <LinearLayout
+                android:id="@+id/layout_social_networks"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding_card"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/img_website_team"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_website"
+                    android:visibility="gone"
+                    android:layout_marginEnd="@dimen/min_margin_card"/>
+
+                <ImageView
+                    android:id="@+id/img_facebook_team"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_facebook"
+                    android:visibility="gone"
+                    android:layout_marginEnd="@dimen/min_margin_card"/>
+
+                <ImageView
+                    android:id="@+id/img_twitter_team"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_twitter"
+                    android:visibility="gone"
+                    android:layout_marginEnd="@dimen/min_margin_card"/>
+
+                <ImageView
+                    android:id="@+id/img_instagram_team"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_instagram"
+                    android:visibility="gone"
+                    android:layout_marginEnd="@dimen/min_margin_card"/>
+
+                <ImageView
+                    android:id="@+id/img_youtube_team"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_youtube"
+                    android:visibility="gone"
+                    android:layout_marginEnd="@dimen/min_margin_card"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

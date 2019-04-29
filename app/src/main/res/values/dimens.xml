@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="space_default">16dp</dimen>
+
+    <!-- activity_league -->
+    <dimen name="recycler_column_width">200dp</dimen>
+    <dimen name="img_badge_size">128dp</dimen>
+    <dimen name="stadium_height">200dp</dimen>
+
+    <!-- activity_team -->
+    <dimen name="size_social_icon">24dp</dimen>
+
+
+    <!-- font size -->
+    <dimen name="size_title">22sp</dimen>
+    <dimen name="size_subtitle">16sp</dimen>
+    <dimen name="padding_title_event">2dp</dimen>
+
+    <!-- row_teams -->
+    <dimen name="padding_card">10dp</dimen>
+    <dimen name="row_img_size">64dp</dimen>
+    <dimen name="item_margin_card">16dp</dimen>
+    <dimen name="min_margin_card">8dp</dimen>
+    <dimen name="size_team_name">20sp</dimen>
+    <dimen name="size_team_stadium">14sp</dimen>
+
+    <!-- row_events -->
+    <dimen name="margin_card">10dp</dimen>
+    <dimen name="card_event_width">280dp</dimen>
+    <dimen name="card_event_height">155dp</dimen>
+    <dimen name="card_corner_radius">4dp</dimen>
+    <dimen name="card_elevation">2dp</dimen>
+    <dimen name="card_margin_end">2dp</dimen>
+</resources>

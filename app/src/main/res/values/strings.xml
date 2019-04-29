@@ -1,0 +1,19 @@
+<resources>
+    <!-- Global app -->
+    <string name="app_name">The Sports DB</string>
+
+    <!-- Splash Activity -->
+    <string name="author">Author: @SoyJorgeDiaz5</string>
+
+    <!-- League Activity -->
+    <string name="msg_error_fetching_data">Sorry, there is an error fetching teams data,
+        please try again or later</string>
+
+    <!-- Team Activity -->
+    <string name="txt_team_jersey">Jersey</string>
+    <string name="txt_foundation_year">Foundation year</string>
+    <!-- Menu -->
+    <string name="action_la_liga">La Liga</string>
+    <string name="action_bundesliga">Bundesliga</string>
+    <string name="action_premier_league">Premier League</string>
+</resources>

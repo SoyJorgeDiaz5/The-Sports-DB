@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:elevation="@dimen/card_elevation"
+    android:layout_marginEnd="@dimen/card_margin_end"
+    app:cardUseCompatPadding="true"
+    app:cardCornerRadius="@dimen/card_corner_radius"
+    >
+    <RelativeLayout
+        android:layout_width="@dimen/card_event_width"
+        android:layout_height="@dimen/card_event_height"
+        >
+        <ImageView
+            android:id="@+id/img_event"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:background="@drawable/hint_event"/>
+
+        <TextView
+            android:id="@+id/tv_event_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/size_subtitle"
+            android:background="@color/overlay_color"
+            android:maxLines="1"
+            android:maxLength="30"
+            android:textColor="@color/text_primary_light"
+            android:gravity="center"
+            android:padding="@dimen/padding_title_event"/>
+
+        <TextView
+            android:id="@+id/tv_date_event"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLength="10"
+            android:textColor="@color/accent"
+            android:textStyle="bold"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="@dimen/min_margin_card"/>
+
+        <TextView
+            android:id="@+id/tv_time_event"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLength="8"
+            android:textColor="@color/accent"
+            android:textStyle="bold"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="@dimen/min_margin_card"/>
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

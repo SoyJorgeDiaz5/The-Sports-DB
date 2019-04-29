@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/menu_la_liga"
+        android:orderInCategory="1"
+        android:title="@string/action_la_liga"
+        app:actionViewClass="androidx.appcompat.widget.SearchView"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/menu_bundesliga"
+        android:orderInCategory="1"
+        android:title="@string/action_bundesliga"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/menu_premier_league"
+        android:orderInCategory="1"
+        android:title="@string/action_premier_league"
+        app:showAsAction="never"/>
+</menu>
