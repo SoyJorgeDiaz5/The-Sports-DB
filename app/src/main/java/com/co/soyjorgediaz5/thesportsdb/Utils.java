@@ -18,10 +18,13 @@ public class Utils {
     public static final String LEAGUE_PARAM_ID = "l";
     public static final String TEAM_PARAM_ID = "id";
 
-    //Default League
+    //Default Leagues
     public static final String LEAGUE_LA_LIGA = "Spanish La Liga";
     public static final String LEAGUE_BUNDESLIGA = "German Bundesliga";
     public static final String LEAGUE_PREMIER_LEAGUE = "English Premier League";
+
+    //Protocol
+    public static final String HTTP = "http://";
 
     //Extras
     public static final String TEAM_EXTRA = ".LeagueAdapter.TEAM_EXTRA";

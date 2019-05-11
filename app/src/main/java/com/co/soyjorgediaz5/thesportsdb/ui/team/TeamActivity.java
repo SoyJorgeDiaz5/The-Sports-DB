@@ -20,6 +20,7 @@ import com.co.soyjorgediaz5.thesportsdb.model.team.Team;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
+import static com.co.soyjorgediaz5.thesportsdb.Utils.HTTP;
 import static com.co.soyjorgediaz5.thesportsdb.Utils.TEAM_EXTRA;
 
 public class TeamActivity extends AppCompatActivity implements ITeamView {
@@ -110,6 +111,6 @@ public class TeamActivity extends AppCompatActivity implements ITeamView {
     }
 
     private void openSocialOption(String url) {
-        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://" + url)));
+        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(HTTP + url)));
     }
 }
