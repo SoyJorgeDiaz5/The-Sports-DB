@@ -75,8 +75,7 @@ public class TeamActivity extends AppCompatActivity implements ITeamView {
     @Override
     public void updateEvents(EventResponse eventResponse) {
         if (eventResponse != null) {
-            EventsAdapter eventsAdapter = new EventsAdapter(eventResponse.getEvents(),
-                    TeamActivity.this);
+            EventsAdapter eventsAdapter = new EventsAdapter(eventResponse.getEvents());
             rvEvents.setAdapter(eventsAdapter);
         }
     }

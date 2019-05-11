@@ -22,18 +22,16 @@ import butterknife.ButterKnife;
 public class EventsAdapter extends RecyclerView.Adapter<EventsAdapter.EventsHolder> {
 
     private List<Event> eventList;
-    private Context mContext;
 
-    public EventsAdapter(List<Event> eventList, Context mContext) {
+    public EventsAdapter(List<Event> eventList) {
         this.eventList = eventList;
-        this.mContext = mContext;
     }
 
     @NonNull
     @Override
     public EventsHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         return new EventsHolder(LayoutInflater
-                .from(mContext)
+                .from(parent.getContext())
                 .inflate(R.layout.row_events, parent, false));
     }
 
@@ -43,7 +41,7 @@ public class EventsAdapter extends RecyclerView.Adapter<EventsAdapter.EventsHold
         holder.tvEventName.setText(eventItem.getStrEvent());
         holder.tvDateEvent.setText(eventItem.getDateEvent());
         holder.tvTimeEvent.setText(eventItem.getStrTime());
-        Utils.setGlideImg(eventItem.getStrThumb(), mContext, holder.imgEvent);
+        Utils.setGlideImg(eventItem.getStrThumb(), holder.imgEvent.getContext(), holder.imgEvent);
     }
 
     @Override
