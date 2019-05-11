@@ -26,18 +26,16 @@ import static com.co.soyjorgediaz5.thesportsdb.Utils.TEAM_EXTRA;
 public class LeagueAdapter extends RecyclerView.Adapter<LeagueAdapter.TeamsHolder> {
 
     private List<Team> teamList;
-    private Context mContext;
 
-    public LeagueAdapter(List<Team> teamList, Context context) {
+    public LeagueAdapter(List<Team> teamList) {
         this.teamList = teamList;
-        this.mContext = context;
     }
 
     @NonNull
     @Override
     public TeamsHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         return new TeamsHolder(LayoutInflater
-                .from(mContext)
+                .from(parent.getContext())
                 .inflate(R.layout.row_teams, parent, false));
     }
 
@@ -46,7 +44,8 @@ public class LeagueAdapter extends RecyclerView.Adapter<LeagueAdapter.TeamsHolde
         Team teamItem = teamList.get(position);
         holder.tvTeamName.setText(teamItem.getStrTeam());
         holder.tvTeamStadium.setText(teamItem.getStrStadium());
-        Utils.setGlideImg(teamItem.getStrTeamBadge(), mContext, holder.imgTeamBadge);
+        Utils.setGlideImg(teamItem.getStrTeamBadge(), holder.imgTeamBadge.getContext(),
+                holder.imgTeamBadge);
     }
 
     @Override
@@ -70,7 +69,7 @@ public class LeagueAdapter extends RecyclerView.Adapter<LeagueAdapter.TeamsHolde
 
         @Override
         public void onClick(View view) {
-            mContext.startActivity(new Intent(mContext, TeamActivity.class)
+            view.getContext().startActivity(new Intent(view.getContext(), TeamActivity.class)
                     .putExtra(TEAM_EXTRA, teamList.get(getLayoutPosition())));
         }
     }

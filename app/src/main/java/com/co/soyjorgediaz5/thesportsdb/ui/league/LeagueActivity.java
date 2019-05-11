@@ -64,7 +64,7 @@ public class LeagueActivity extends AppCompatActivity implements ILeagueView {
     @Override
     public void updateAdapter(TeamResponse teamResponse){
         if (teamResponse != null){
-            LeagueAdapter leagueAdapter = new LeagueAdapter(teamResponse.getTeams(), LeagueActivity.this);
+            LeagueAdapter leagueAdapter = new LeagueAdapter(teamResponse.getTeams());
             rvTeams.setAdapter(leagueAdapter);
         }
     }
